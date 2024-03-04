@@ -1,0 +1,16 @@
+const auto t1 = Fv[0]*Fv[0];
+const auto t2 = 0.5*t1;
+const auto t3 = Fv[2]*Fv[2];
+const auto t4 = 0.5*t3;
+const auto t5 = Fv[1]*Fv[1];
+const auto t6 = 0.5*t5;
+const auto t7 = Fv[3]*Fv[3];
+const auto t8 = 0.5*t7;
+const auto t10 = lame1*(t2+t4-0.1E1+t6+t8);
+const auto t13 = t2+t4-0.5;
+const auto t20 = 0.5*Fv[0]*Fv[1]+0.5*Fv[2]*Fv[3];
+const auto t30 = t6+t8-0.5;
+      vgx[0] = 0.1E1*t10*Fv[0]+lame2*(0.2E1*t13*Fv[0]+0.2E1*t20*Fv[1]);
+      vgx[1] = 0.1E1*t10*Fv[1]+lame2*(0.2E1*t20*Fv[0]+0.2E1*t30*Fv[1]);
+      vgx[2] = 0.1E1*t10*Fv[2]+lame2*(0.2E1*t13*Fv[2]+0.2E1*t20*Fv[3]);
+      vgx[3] = 0.1E1*t10*Fv[3]+lame2*(0.2E1*t20*Fv[2]+0.2E1*t30*Fv[3]);

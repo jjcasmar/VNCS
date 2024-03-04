@@ -1,0 +1,13 @@
+const auto t1 = Fv[0]*Fv[0];
+const auto t2 = 0.5*t1;
+const auto t3 = Fv[2]*Fv[2];
+const auto t4 = 0.5*t3;
+const auto t5 = Fv[1]*Fv[1];
+const auto t6 = 0.5*t5;
+const auto t7 = Fv[3]*Fv[3];
+const auto t8 = 0.5*t7;
+const auto t10 = pow(t2+t4-0.1E1+t6+t8,2.0);
+const auto t14 = pow(t2+t4-0.5,2.0);
+const auto t20 = pow(0.5*Fv[0]*Fv[1]+0.5*Fv[2]*Fv[3],2.0);
+const auto t23 = pow(t6+t8-0.5,2.0);
+const auto t26 = 0.5*lame1*t10+lame2*(t14+2.0*t20+t23);

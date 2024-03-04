@@ -1,0 +1,6 @@
+
+add_executable(tst_trianglefabricbendingenergy tst_trianglefabricbendingenergy.cpp)
+target_link_libraries(tst_trianglefabricbendingenergy VNCS Catch2::Catch2 SofaSimulationGraph)
+target_compile_definitions(tst_trianglefabricbendingenergy PRIVATE ASSETS_DIR="${CMAKE_CURRENT_SOURCE_DIR}/")
+
+catch_discover_tests(tst_trianglefabricbendingenergy)

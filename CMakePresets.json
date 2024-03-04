@@ -1,0 +1,38 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "debug",
+            "displayName": "Debug",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/Debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_PREFIX_PATH": "/mnt/F/jjcasmar/projects/sofa/build/install;/home/jjcasmar/usr/local;/usr/local",
+                "VNCS_ENABLE_TESTS": "False",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "True"
+            }
+        },
+        {
+            "name": "release",
+            "displayName": "Release",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/Release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_PREFIX_PATH": "/mnt/F/jjcasmar/projects/sofa/build/install;/home/jjcasmar/usr/local;/usr/local",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": "True"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug",
+            "configurePreset": "debug"
+        },
+        {
+            "name": "release",
+            "configurePreset": "release"
+        }
+    ]
+}
